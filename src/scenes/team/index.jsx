@@ -43,6 +43,7 @@ const Team = () => {
       renderCell: ({ row: { access } }) => {
         return (
           <Box
+            m="20px"
             className="w-[60%] mx-auto my-0 p-[5px] flex justify-center rounded"
             backgroundColor={
               access === "admin"

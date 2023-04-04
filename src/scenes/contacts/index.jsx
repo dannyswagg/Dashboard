@@ -53,7 +53,7 @@ const Index = () => {
   ];
   return (
     <>
-      <Box className="m-[20px]">
+      <Box m="20px">
         <Header title="CONTACTS" subtitle="Team Contact Information" />
         <Box
           m="40px 0 0 0"

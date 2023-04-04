@@ -38,6 +38,11 @@ const GeographyChart = ({ isDashboard = false }) => {
             fill: colors.grey[100],
           },
         },
+        tooltip: {
+          container: {
+            color: colors.primary[500],
+          },
+        },
       }}
       features={geoFeatures.features}
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
@@ -70,7 +75,7 @@ const GeographyChart = ({ isDashboard = false }) => {
                   {
                     on: "hover",
                     style: {
-                      itemTextColor: "#ffffff",
+                      itemTextColor: "#000000",
                       itemOpacity: 1,
                     },
                   },
