@@ -112,7 +112,7 @@ const Dashboard = () => {
 
       {/* The second row starts here */}
       <Box className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <Box backgroundColor={colors.primary[400]} className="h-36">
+        <Box backgroundColor={colors.primary[400]}>
           <Box backgroundColor={colors.primary[400]}>
             <Box className="flex justify-between items-center mt-6 px-7">
               <Box>
@@ -150,6 +150,7 @@ const Dashboard = () => {
             gridRow="span 2"
             backgroundColor={colors.primary[400]}
             overflow="auto"
+            className="h-80"
           >
             <Box
               display="flex"
@@ -204,7 +205,7 @@ const Dashboard = () => {
 
       <Box className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-5 mt-5">
         <Box>
-          <Box className="p-8" backgroundColor={colors.primary[400]} p="30px">
+          <Box className="p-[34px]" backgroundColor={colors.primary[400]}>
             <Typography variant="h5" fontWeight="600">
               Campaign
             </Typography>
