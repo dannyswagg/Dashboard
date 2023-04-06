@@ -56,6 +56,7 @@ const Index = () => {
       <Box m="20px">
         <Header title="CONTACTS" subtitle="Team Contact Information" />
         <Box
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-x-4 gap-y-8 w-full overflow-x-auto"
           m="40px 0 0 0"
           height="75vh"
           sx={{

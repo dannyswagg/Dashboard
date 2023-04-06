@@ -12,6 +12,7 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -114,34 +115,37 @@ const Dashboard = () => {
       <Box className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Box backgroundColor={colors.primary[400]}>
           <Box backgroundColor={colors.primary[400]}>
-            <Box className="flex justify-between items-center mt-6 px-7">
-              <Box>
-                <Typography
-                  variant="h5"
-                  fontWeight="600"
-                  color={colors.grey[100]}
-                >
-                  Revenue Generated
-                </Typography>
-                <Typography
-                  variant="h3"
-                  fontWeight="bold"
-                  color={colors.greenAccent[500]}
-                >
-                  $59,342.32
-                </Typography>
+            <Link to="/line">
+              <Box className="flex justify-between items-center mt-6 px-7">
+                <Box>
+                  <Typography
+                    variant="h5"
+                    fontWeight="600"
+                    color={colors.grey[100]}
+                  >
+                    Revenue Generated
+                  </Typography>
+                  <Typography
+                    variant="h3"
+                    fontWeight="bold"
+                    color={colors.greenAccent[500]}
+                  >
+                    $59,342.32
+                  </Typography>
+                </Box>
+                <Box>
+                  <IconButton>
+                    <DownloadOutlinedIcon
+                      sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
+                    />
+                  </IconButton>
+                </Box>
               </Box>
-              <Box>
-                <IconButton>
-                  <DownloadOutlinedIcon
-                    sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
-                  />
-                </IconButton>
+
+              <Box height="250px" m="-20px 0 0 0">
+                <LineChart isDashboard={true} />
               </Box>
-            </Box>
-            <Box height="250px" m="-20px 0 0 0">
-              <LineChart isDashboard={true} />
-            </Box>
+            </Link>
           </Box>
         </Box>
         <Box>
@@ -225,24 +229,28 @@ const Dashboard = () => {
           </Box>
         </Box>
         <Box>
-          <Box backgroundColor={colors.primary[400]}>
-            <Typography className="font-[600] px-7 pt-7" variant="h5">
-              Sales Quantity
-            </Typography>
-            <Box height="250px" mt="-20px">
-              <BarChart isDashboard={true} />
+          <Link to="/bar">
+            <Box backgroundColor={colors.primary[400]}>
+              <Typography className="font-[600] px-7 pt-7" variant="h5">
+                Sales Quantity
+              </Typography>
+              <Box height="250px" mt="-20px">
+                <BarChart isDashboard={true} />
+              </Box>
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box>
-          <Box className="p-7" backgroundColor={colors.primary[400]}>
-            <Typography className="font-[600] mb-4" variant="h5">
-              Geography Based Traffic
-            </Typography>
-            <Box height="200px">
-              <GeographyChart isDashboard={true} />
+          <Link to="/geography">
+            <Box className="p-7" backgroundColor={colors.primary[400]}>
+              <Typography className="font-[600] mb-4" variant="h5">
+                Geography Based Traffic
+              </Typography>
+              <Box height="200px">
+                <GeographyChart isDashboard={true} />
+              </Box>
             </Box>
-          </Box>
+          </Link>
         </Box>
       </Box>
     </Box>

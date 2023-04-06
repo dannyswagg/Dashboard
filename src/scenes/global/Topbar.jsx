@@ -16,7 +16,7 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
   return (
     <>
-      <Box className="flex justify-between p-2">
+      <Box className="flex justify-start justify-between lg:justify-between p-2">
         <Box className="flex rounded" backgroundColor={colors.primary[400]}>
           <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
           <IconButton type="button" sx={{ p: 1 }}>
